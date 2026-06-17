@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lectio do dia — Mt 6,7-15</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --parchment:#F6F1E4;--panel:#F0E9D7;--ink:#3A2D20;--ink-soft:#6B5A41;
+    --gold:#9A7528;--gilt:#B68F38;--rubric:#8E2A20;
+    --hair:rgba(58,45,32,.16);--goldhair:rgba(154,117,40,.45);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{margin:0;background:#EFE8D8;color:var(--ink);
+    font-family:"Cormorant Garamond",Georgia,serif;font-size:20px;line-height:1.66;
+    text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;}
+  .leaf{max-width:712px;margin:34px auto;background:var(--parchment);
+    padding:54px 56px 78px;position:relative;border:1px solid var(--goldhair);
+    box-shadow:0 24px 60px -40px rgba(58,45,32,.55);animation:fade .9s ease both;}
+  .leaf::before{content:"";position:absolute;inset:13px;border:1px solid var(--hair);pointer-events:none;}
+  @keyframes fade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+  @media (prefers-reduced-motion: reduce){*{animation:none!important;}}
+
+  header{text-align:center;margin-bottom:14px;}
+  .crest{color:var(--gilt);font-size:1.05rem;letter-spacing:.3em;margin-bottom:18px;}
+  .date{font-family:"Cinzel",serif;font-weight:500;font-size:.68rem;letter-spacing:.3em;
+    text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+  .rule{display:flex;align-items:center;justify-content:center;gap:16px;color:var(--gilt);margin:6px auto 0;}
+  .rule::before,.rule::after{content:"";height:1px;width:80px;
+    background:linear-gradient(90deg,transparent,var(--goldhair),transparent);}
+  .rule span{font-family:"Cinzel",serif;font-size:.82rem;letter-spacing:.16em;color:var(--ink);}
+
+  .section-head{text-align:center;margin:54px 0 26px;}
+  .section-head .eyebrow{font-family:"Cinzel",serif;font-weight:600;font-size:.7rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:16px;}
+  .section-head .eyebrow::before,.section-head .eyebrow::after{
+    content:"";height:1px;width:40px;background:var(--goldhair);}
+
+  .rubric{font-family:"Cinzel",serif;color:var(--rubric);text-transform:uppercase;
+    letter-spacing:.18em;font-size:.66rem;font-weight:600;}
+
+  .gospel{background:var(--panel);border:1px solid var(--goldhair);padding:38px 34px 28px;position:relative;}
+  .gospel .proclam{display:block;text-align:center;margin-bottom:22px;}
+  .gospel p{margin:0;font-size:1.24rem;line-height:1.62;}
+  .initial{float:left;font-family:"Cinzel",serif;font-weight:700;color:var(--gilt);
+    font-size:2.5rem;line-height:1;width:1.5em;height:1.5em;display:flex;align-items:center;justify-content:center;
+    margin:.05em .4em .06em 0;border:1px solid var(--gilt);background:#FBF7EC;}
+  .v{font-family:"Cinzel",serif;font-size:.58em;color:var(--gold);font-weight:600;vertical-align:.5em;margin:0 .12em 0 .08em;}
+  .salv{display:block;text-align:center;margin-top:24px;}
+
+  .cure{margin:50px 0 0;padding:0;list-style:none;}
+  .cure>li{display:grid;grid-template-columns:54px 1fr;gap:20px;padding:24px 2px;
+    border-top:1px solid var(--hair);align-items:start;}
+  .cure>li:first-child{border-top:none;}
+  .cure .rn{font-family:"Cinzel",serif;font-weight:600;color:var(--gilt);font-size:1.55rem;
+    line-height:1;text-align:center;padding-top:.1em;}
+  .cure .lead{font-family:"Cinzel",serif;font-weight:600;color:var(--ink);font-size:.98rem;
+    letter-spacing:.012em;display:block;margin-bottom:9px;}
+  .cure .vref{color:var(--gold);font-weight:500;}
+  .cure .body{font-size:1.15rem;color:var(--ink-soft);line-height:1.56;margin:0;}
+
+  .prep{max-width:42ch;margin:0 auto;}
+  .prep p{font-size:1.2rem;color:var(--ink);line-height:1.6;margin:0 0 1em;}
+  .prep p:last-child{margin-bottom:0;}
+
+  .oracao-body{text-align:center;max-width:36ch;margin:0 auto;}
+  .oracao-body p{font-style:italic;font-size:1.26rem;line-height:1.5;margin:0;color:var(--ink);}
+  .caesura{color:var(--gilt);font-size:.8rem;letter-spacing:.4em;margin:18px 0;}
+  .amen{font-family:"Cinzel",serif;font-style:normal;color:var(--rubric);font-weight:600;
+    letter-spacing:.16em;font-size:.7em;text-transform:uppercase;margin-left:.35em;}
+
+  footer{margin-top:62px;text-align:center;color:var(--ink-soft);font-size:.95rem;}
+  .foot-orn{color:var(--gilt);letter-spacing:.4em;margin-bottom:16px;font-size:.85rem;}
+  footer .series{font-family:"Cinzel",serif;letter-spacing:.2em;text-transform:uppercase;
+    font-size:.64rem;color:var(--gold);margin-top:10px;}
+
+  @media (max-width:560px){
+    body{font-size:18px;}
+    .leaf{margin:0;padding:40px 22px 60px;border:none;box-shadow:none;}
+    .leaf::before{inset:9px;}
+    .gospel{padding:30px 22px 24px;}
+    .cure>li{grid-template-columns:40px 1fr;gap:14px;}
+  }
+  @media print{body{background:#fff;}.leaf{margin:0;border:none;box-shadow:none;max-width:none;}}
+</style>
+</head>
+<body>
+  <article class="leaf">
+
+    <header>
+      <div class="crest">&#10016;</div>
+      <div class="date">Quinta-feira &middot; 18 de Junho de 2026 &middot; 11ª Semana do Tempo Comum</div>
+      <div class="rule"><span>Mateus 6, 7&ndash;15</span></div>
+    </header>
+
+    <div class="section-head"><span class="eyebrow">Evangelho</span></div>
+    <section class="gospel">
+      <span class="rubric proclam">Proclamação do Evangelho de Jesus Cristo segundo Mateus</span>
+      <p><span class="initial">N</span>aquele tempo, disse Jesus aos seus discípulos:<span class="v">7</span>&ldquo;Quando orardes, não useis de muitas palavras, como fazem os pagãos. Eles pensam que serão ouvidos por força das muitas palavras.<span class="v">8</span>Não sejais como eles, porque vosso Pai sabe o que vos é necessário, antes de vós o pedirdes.<span class="v">9</span>Portanto, vós deveis rezar assim: &lsquo;Pai nosso, que estais nos céus, santificado seja o vosso nome;<span class="v">10</span>venha a nós o vosso Reino; seja feita a vossa vontade, assim na terra como no céu.<span class="v">11</span>O pão nosso de cada dia dai-nos hoje;<span class="v">12</span>perdoai-nos as nossas ofensas, assim como nós perdoamos a quem nos tem ofendido;<span class="v">13</span>e não nos deixeis cair em tentação, mas livrai-nos do mal.&rsquo;<span class="v">14</span>De fato, se perdoardes aos homens as suas faltas, vosso Pai celeste também vos perdoará.<span class="v">15</span>Mas, se não perdoardes aos homens, vosso Pai também não perdoará as vossas faltas.&rdquo;</p>
+      <span class="rubric salv">Palavra da Salvação</span>
+    </section>
+
+    <ol class="cure">
+      <li><span class="rn">I</span><div>
+        <span class="lead">Não é o palavreado, é a confiança <span class="vref">&middot; vv. 7-8</span></span>
+        <p class="body">Jesus começa dizendo como não rezar: amontoando palavras, como quem tenta dobrar Deus na insistência. E dá o motivo, que muda tudo: o Pai já sabe do que precisamos antes mesmo de abrirmos a boca. Com isso Ele desfaz em nós a imagem de um Deus que precisa ser convencido e nos liberta para rezar com a confiança de quem é filho. Antes de pedir qualquer coisa, vale ficar um instante em silêncio, sabendo que já somos conhecidos e esperados.</p>
+      </div></li>
+
+      <li><span class="rn">II</span><div>
+        <span class="lead">&ldquo;Pai nosso&rdquo;: como filho e como irmão <span class="vref">&middot; v. 9a</span></span>
+        <p class="body">A primeira palavra que Jesus nos ensina é &ldquo;Pai nosso, que estais nos céus&rdquo;. Não &ldquo;meu&rdquo;, e sim &ldquo;nosso&rdquo;: em duas palavras Ele nos coloca diante de Deus como filhos e, ao mesmo tempo, lado a lado de todos os irmãos. Isso toca a nossa mania de rezar fechados em nós mesmos, só com as nossas causas. Dizer &ldquo;Pai nosso&rdquo; abre o nosso coração e nos faz carregar na oração até o irmão de quem já nem nos lembrávamos.</p>
+      </div></li>
+
+      <li><span class="rn">III</span><div>
+        <span class="lead">Primeiro as coisas de Deus <span class="vref">&middot; vv. 9b-10</span></span>
+        <p class="body">As três primeiras coisas que Jesus nos faz pedir não são nossas: que o nome de Deus seja santificado, que venha o seu Reino, que se faça a sua vontade. Antes das nossas necessidades, a oração levanta os olhos para Deus. Aqui Ele endireita em nós uma ordem que costuma andar de cabeça para baixo, com o eu sempre na frente. Pedir &ldquo;seja feita a vossa vontade&rdquo; nos move a soltar o controle e a confiar que o querer de Deus é melhor que o nosso.</p>
+      </div></li>
+
+      <li><span class="rn">IV</span><div>
+        <span class="lead">Depois as nossas necessidades <span class="vref">&middot; vv. 11-13</span></span>
+        <p class="body">Só então Jesus abre espaço para o que é nosso: o pão de cada dia, o perdão das ofensas, a força para não cair na tentação, o livramento do mal. Ele nos mostra como levar a Deus a vida concreta, sem vergonha de depender: o pão de hoje, e não o estoque do ano que vem; o perdão de que precisamos agora; a proteção de cada dia. Vale nomear diante d'Ele, com simplicidade, a necessidade real deste dia e entregá-la.</p>
+      </div></li>
+
+      <li><span class="rn">V</span><div>
+        <span class="lead">A medida que vale é o perdão <span class="vref">&middot; vv. 14-15</span></span>
+        <p class="body">De tudo o que ensinou, Jesus volta e sublinha um único pedido: se perdoarmos aos outros, o Pai nos perdoa; se não perdoarmos, também não seremos perdoados. Ele põe o dedo no rancor que insistimos em guardar, naquela conta antiga que não soltamos. A cura aqui custa um pouco: escolher perdoar alguém de verdade, porque é por essa mesma porta que o perdão de Deus entra por inteiro na nossa vida.</p>
+      </div></li>
+    </ol>
+
+    <div class="section-head"><span class="eyebrow">Reflexão pessoal</span></div>
+    <section class="prep">
+      <p>Antes de repetir as palavras que já sabemos de cor, vale lembrar de quem as recebemos. O Pai Nosso não é uma fórmula para preencher o silêncio: é a oração que o próprio Filho colocou na nossa boca, para aprendermos a falar com Deus como Ele fala, com a confiança de um filho.</p>
+      <p>Talvez a graça de hoje seja rezar devagar, deixando cada pedido encostar na vida real. Há um pão que está faltando, um perdão que custa a sair, uma vontade de Deus que ainda nos assusta. É com tudo isso, e não apesar disso, que nos voltamos para o Pai.</p>
+    </section>
+
+    <div class="section-head"><span class="eyebrow">Oração</span></div>
+    <section class="oracao">
+      <div class="oracao-body">
+        <p>Pai, me ensina a rezar sem precisar te convencer. Antes de qualquer pedido, quero ficar um instante em silêncio diante de Ti, confiando que já conheces o meu coração e já sabes do que preciso.</p>
+        <div class="caesura">&#10016;</div>
+        <p>Quando eu disser &ldquo;Pai nosso&rdquo;, não me deixa rezar sozinho. Abre o meu coração para os irmãos e me ensina a carregar na oração também aqueles de quem eu costumo esquecer.</p>
+        <div class="caesura">&#10016;</div>
+        <p>Senhor, põe ordem nos meus pedidos. Que eu queira antes de tudo o teu nome, o teu Reino e a tua vontade, e me dá a coragem de soltar o controle, confiando que o teu querer é melhor que o meu.</p>
+        <div class="caesura">&#10016;</div>
+        <p>Dá-me hoje o pão deste dia e a humildade de depender de Ti sem vergonha. Te entrego, simples, a necessidade que me aperta agora, e a deixo nas tuas mãos.</p>
+        <div class="caesura">&#10016;</div>
+        <p>E me dá a coragem de perdoar. Solta em mim a conta antiga que eu insisto em segurar, para que o teu perdão encontre a porta aberta e entre por inteiro na minha vida.<span class="amen">Amém.</span></p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="foot-orn">&#10016;</div>
+      <p>Lectio do dia &middot; Evangelho, cura e oração</p>
+      <p class="series">Ad Maiorem Dei Gloriam</p>
+    </footer>
+
+  </article>
+</body>
+</html>
